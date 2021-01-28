@@ -1,0 +1,59 @@
+\hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_util_1_1_retry}{}\doxysection{Aws\+::Iot\+::Device\+Client\+::Util\+::Retry Class Reference}
+\label{class_aws_1_1_iot_1_1_device_client_1_1_util_1_1_retry}\index{Aws::Iot::DeviceClient::Util::Retry@{Aws::Iot::DeviceClient::Util::Retry}}
+
+
+Provides utility methods for retrying a function.  
+
+
+
+
+{\ttfamily \#include $<$Retry.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_retry_1_1_exponential_retry_config}{Exponential\+Retry\+Config}}
+\begin{DoxyCompactList}\small\item\em Used for passing an exponential retry configuration to the exponential\+Backoff function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_util_1_1_retry_a6d55342ef0ae5d2a10e40b317e9c51cc}{exponential\+Backoff}} (std\+::function$<$ bool()$>$ retryable\+Function, \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_retry_1_1_exponential_retry_config}{Exponential\+Retry\+Config}} config)
+\begin{DoxyCompactList}\small\item\em Performs an exponential backoff of the provided function based on the specified \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_retry_1_1_exponential_retry_config}{Exponential\+Retry\+Config}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_util_1_1_retry_a089016a730bb3f65c6173a1fe7f34116}\label{class_aws_1_1_iot_1_1_device_client_1_1_util_1_1_retry_a089016a730bb3f65c6173a1fe7f34116}} 
+static const char $\ast$ {\bfseries T\+AG} = \char`\"{}Retry.\+cpp\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides utility methods for retrying a function. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_util_1_1_retry_a6d55342ef0ae5d2a10e40b317e9c51cc}\label{class_aws_1_1_iot_1_1_device_client_1_1_util_1_1_retry_a6d55342ef0ae5d2a10e40b317e9c51cc}} 
+\index{Aws::Iot::DeviceClient::Util::Retry@{Aws::Iot::DeviceClient::Util::Retry}!exponentialBackoff@{exponentialBackoff}}
+\index{exponentialBackoff@{exponentialBackoff}!Aws::Iot::DeviceClient::Util::Retry@{Aws::Iot::DeviceClient::Util::Retry}}
+\doxysubsubsection{\texorpdfstring{exponentialBackoff()}{exponentialBackoff()}}
+{\footnotesize\ttfamily bool Retry\+::exponential\+Backoff (\begin{DoxyParamCaption}\item[{std\+::function$<$ bool()$>$}]{retryable\+Function,  }\item[{\mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_retry_1_1_exponential_retry_config}{Exponential\+Retry\+Config}}}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs an exponential backoff of the provided function based on the specified \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_retry_1_1_exponential_retry_config}{Exponential\+Retry\+Config}}. 
+
+In the event of throttling by IoT Core A\+P\+Is, such as when we perform Update\+Job\+Execution within the Jobs feature, it is necessary to perform an exponential backoff to improve the chances of receiving a success response. 
+\begin{DoxyParams}{Parameters}
+{\em retryable\+Function} & the function to retry. This function should return a bool indicating whether it is successful or not, since this indicator is what will determine whether the function is retried or not. \\
+\hline
+{\em config} & the \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_retry_1_1_exponential_retry_config}{Exponential\+Retry\+Config}} specifying whether the function should be retried \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a bool representing whether the retryable\+Function was successful or not 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/aws-\/iot-\/device-\/client/aws-\/iot-\/device-\/client/source/util/Retry.\+h\item 
+/home/runner/work/aws-\/iot-\/device-\/client/aws-\/iot-\/device-\/client/source/util/Retry.\+cpp\end{DoxyCompactItemize}
